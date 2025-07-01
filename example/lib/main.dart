@@ -131,7 +131,7 @@ class _MyAppState extends State<MyApp> {
             title: Text('get version from app store(WeChat)'),
             trailing: iosVersion != null
                 ? Text(iosVersion!,
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Colors.grey,
                         ))
                 : null,
@@ -148,12 +148,16 @@ class _MyAppState extends State<MyApp> {
 
   Widget _buildAndroidPlatformWidget() => ListView(
         children: <Widget>[
+          // ListTile(
+          //   title: Text('热更新内容++++++++++'),
+          //   onTap: () async {},
+          // ),
           _buildDownloadWindow(),
           Divider(),
           ListTile(
             title: Text(
               S.of(context).Notification_Related,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -235,7 +239,7 @@ class _MyAppState extends State<MyApp> {
           ListTile(
             title: Text(
               S.of(context).Install_Related,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -272,15 +276,15 @@ class _MyAppState extends State<MyApp> {
             ListTile(
               title: Text(
                 S.of(context).Install_Type_Silent_Tip,
-                style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                      color: Theme.of(context).errorColor,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.error,
                     ),
               ),
             ),
           ListTile(
             title: Text(
               S.of(context).Update_the_related,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -326,7 +330,7 @@ class _MyAppState extends State<MyApp> {
             },
             trailing: androidVersion != null
                 ? Text(androidVersion!,
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Colors.grey,
                         ))
                 : null,
@@ -443,7 +447,7 @@ class _MyAppState extends State<MyApp> {
           ListTile(
             title: Text(
               S.of(context).Hot_update_related,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -458,7 +462,7 @@ class _MyAppState extends State<MyApp> {
               }
 //              if (!await canReadStorage()) return;
               id = await RUpgrade.upgrade(
-                  'https://mydata-1252536312.cos.ap-guangzhou.myqcloud.com/r_upgrade.zip',
+                  'https://tonga.oss-cn-chengdu.aliyuncs.com/hotfix.zip',
                   fileName: 'r_upgrade.zip',
                   useDownloadManager: false,
                   installType: installType,
@@ -516,7 +520,7 @@ class _MyAppState extends State<MyApp> {
           ListTile(
             title: Text(
               S.of(context).Incremental_updating,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -582,7 +586,7 @@ class _MyAppState extends State<MyApp> {
           ListTile(
             title: Text(
               S.of(context).History_related,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -592,7 +596,7 @@ class _MyAppState extends State<MyApp> {
             trailing: lastId != null
                 ? Text(
                     lastId.toString(),
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Colors.grey,
                         ),
                   )
@@ -629,7 +633,7 @@ class _MyAppState extends State<MyApp> {
             ),
             trailing: lastStatus != null
                 ? Text(getStatus(lastStatus),
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Colors.grey,
                         ))
                 : null,
